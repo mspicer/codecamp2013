@@ -20,22 +20,11 @@ Codecamp2013.ImageItemComponent = Ember.Component.extend({
   {
     openimg: function(path) {
         //var item = this.get('item');
-        var img = new Image();
-        $(img).load(function(){
-          $(this).hide();
-          //$(this).imgscale({scale: 'fit'});
-          $('#loader')
-            .empty()
-            .removeClass('loading')
-            .append(img);
-            $(img).resizeToParent();
-          $(this).fadeIn();
-        })
-        .error(function() {
-          $('.loader').append('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button><strong>Oh snap!</strong> We can not load the stored image. Sorry :(</div>');
-        })
-        .attr('src', path)
-        //this.$('.img-responsive').attr("src",item.path);
+        $('#loader img').attr('src',path);
+       
+        $('#loader img').resizeToParent();
+        
+      
       },
     
 
