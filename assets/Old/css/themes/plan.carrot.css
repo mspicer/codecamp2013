@@ -1,0 +1,1588 @@
+/*!
+ * Plan Skin for Bootstrap v2.3.2
+ * 
+ * Author: Geedmo.
+ * Website: http://geedmo.com
+ * Version: 1.1
+ *
+ * Copyright (c) 2013, Geedmo. All rights reserved.
+ * Released under CodeCanyon License: http://codecanyon.net/licenses
+ * 
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 36px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.checkbox,
+.radio {
+  position: relative;
+  padding-left: 30px;
+  -webkit-transition: color linear 0.2s;
+  -moz-transition: color linear 0.2s;
+  -o-transition: color linear 0.2s;
+  transition: color linear 0.2s;
+  overflow: hidden;
+}
+.checkbox .ctrl-overlay,
+.radio .ctrl-overlay {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  line-height: 21px;
+  background-color: #bcc1c7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  text-indent: 0\9;
+  -webkit-transition: background-color linear 0.2s;
+  -moz-transition: background-color linear 0.2s;
+  -o-transition: background-color linear 0.2s;
+  transition: background-color linear 0.2s;
+}
+.checkbox.checked .ctrl-overlay,
+.radio.checked .ctrl-overlay {
+  content: "\f00c";
+  background-color: #e67e22;
+  -webkit-transition: background-color linear 0.2s;
+  -moz-transition: background-color linear 0.2s;
+  -o-transition: background-color linear 0.2s;
+  transition: background-color linear 0.2s;
+}
+.checkbox.disabled .ctrl-overlay,
+.radio.disabled .ctrl-overlay {
+  background-color: #bcc1c7;
+}
+.checkbox:hover,
+.radio:hover {
+  color: #e67e22;
+  -webkit-transition: color linear 0.2s;
+  -moz-transition: color linear 0.2s;
+  -o-transition: color linear 0.2s;
+  transition: color linear 0.2s;
+}
+.checkbox input[type="checkbox"],
+.radio input[type="checkbox"],
+.checkbox input[type="radio"],
+.radio input[type="radio"] {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  outline: none !important;
+}
+.radio .ctrl-overlay {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+.toggle {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+  overflow: hidden;
+  background-color: #bcc1c7;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+.toggle input {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  outline: none;
+  display: none;
+}
+.toggle > em,
+.toggle > em[class^="icon-"] {
+  position: absolute;
+  font-size: 24px;
+  line-height: 30px;
+  right: auto;
+  left: 0;
+  margin-left: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-transition: margin-left 0.3s ease-out;
+  -moz-transition: margin-left 0.3s ease-out;
+  -o-transition: margin-left 0.3s ease-out;
+  transition: margin-left 0.3s ease-out;
+}
+.toggle .toggle-on,
+.toggle .toggle-off {
+  width: 50px;
+  height: 30px;
+  margin-left: 20px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.toggle .toggle-off {
+  display: block;
+}
+.toggle .toggle-on {
+  display: none;
+}
+.toggle.on {
+  background-color: #e67e22;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+.toggle.on > em {
+  margin-left: 40px;
+  -webkit-transition: margin-left 0.3s ease-out;
+  -moz-transition: margin-left 0.3s ease-out;
+  -o-transition: margin-left 0.3s ease-out;
+  transition: margin-left 0.3s ease-out;
+}
+.toggle.on .toggle-on {
+  display: block;
+  margin-left: 0;
+}
+.toggle.on .toggle-off {
+  display: none;
+}
+.toggle.disabled {
+  background-color: #bcc1c7;
+}
+.toggle.toggle-square {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.toggle-success.on {
+  background-color: #27ae60;
+}
+.toggle-warning.on {
+  background-color: #f1c40f;
+}
+.toggle-info.on {
+  background-color: #3498db;
+}
+.toggle-inverse.on {
+  background-color: #2c3e50;
+}
+.toggle-danger.on {
+  background-color: #2c3e50;
+}
+.dropdown-select {
+  text-align: left !important;
+}
+.dropdown-select .caret {
+  position: absolute;
+  right: 10px;
+}
+.dropdown-select + .dropdown-menu {
+  width: 100%;
+}
+.input-append.input-icon input,
+.input-prepend.input-icon input,
+.input-append.input-icon.input-focused input,
+.input-prepend.input-icon.input-focused input {
+  outline: none !important;
+}
+.input-append.input-icon > .add-on,
+.input-prepend.input-icon > .add-on,
+.input-append.input-icon.input-focused > .add-on,
+.input-prepend.input-icon.input-focused > .add-on,
+.input-append.input-icon > .add-on:hover,
+.input-prepend.input-icon > .add-on:hover,
+.input-append.input-icon.input-focused > .add-on:hover,
+.input-prepend.input-icon.input-focused > .add-on:hover {
+  background-color: #fff !important;
+  color: #bcc1c7 !important;
+}
+.input-prepend.input-icon .add-on:first-child {
+  border-right: 0;
+}
+.input-append.input-icon .add-on:last-child {
+  border-left: 0;
+}
+.table-bordered.bordered-primary,
+.table-bordered.bordered-primary td,
+.table-bordered.bordered-primary tr,
+.table-bordered.bordered-primary th {
+  border-color: #e67e22;
+}
+.table-bordered.bordered-danger,
+.table-bordered.bordered-danger td,
+.table-bordered.bordered-danger tr,
+.table-bordered.bordered-danger th {
+  border-color: #d94d3f;
+}
+.table-bordered.bordered-info,
+.table-bordered.bordered-info td,
+.table-bordered.bordered-info tr,
+.table-bordered.bordered-info th {
+  border-color: #3498db;
+}
+.table-bordered.bordered-success,
+.table-bordered.bordered-success td,
+.table-bordered.bordered-success tr,
+.table-bordered.bordered-success th {
+  border-color: #27ae60;
+}
+.table-bordered.bordered-warning,
+.table-bordered.bordered-warning td,
+.table-bordered.bordered-warning tr,
+.table-bordered.bordered-warning th {
+  border-color: #f1c40f;
+}
+.table-bordered.bordered-inverse,
+.table-bordered.bordered-inverse td,
+.table-bordered.bordered-inverse tr,
+.table-bordered.bordered-inverse th {
+  border-color: #2c3e50;
+}
+table.header-primary thead {
+  background-color: #e67e22;
+  color: #fff;
+}
+table.header-primary tbody > tr:first-child > td {
+  border-top: 0;
+}
+table.header-danger thead {
+  background-color: #d94d3f;
+  color: #fff;
+}
+table.header-danger tbody > tr:first-child > td {
+  border-top: 0;
+}
+table.header-info thead {
+  background-color: #3498db;
+  color: #fff;
+}
+table.header-info tbody > tr:first-child > td {
+  border-top: 0;
+}
+table.header-success thead {
+  background-color: #27ae60;
+  color: #fff;
+}
+table.header-success tbody > tr:first-child > td {
+  border-top: 0;
+}
+table.header-warning thead {
+  background-color: #f1c40f;
+  color: #fff;
+}
+table.header-warning tbody > tr:first-child > td {
+  border-top: 0;
+}
+table.header-inverse thead {
+  background-color: #2c3e50;
+  color: #fff;
+}
+table.header-inverse tbody > tr:first-child > td {
+  border-top: 0;
+}
+.btn-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.btn-icon em {
+  display: inline-block;
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+.btn-transparent {
+  background-color: transparent;
+}
+.btn-transparent,
+.btn-transparent:hover {
+  -webkit-transition: color .2s ease, background-color .2s ease;
+  -moz-transition: color .2s ease, background-color .2s ease;
+  -o-transition: color .2s ease, background-color .2s ease;
+  transition: color .2s ease, background-color .2s ease;
+}
+.btn-transparent.btn-primary {
+  color: #e67e22;
+}
+.btn-transparent.btn-danger {
+  color: #d94d3f;
+}
+.btn-transparent.btn-warning {
+  color: #f1c40f;
+}
+.btn-transparent.btn-info {
+  color: #3498db;
+}
+.btn-transparent.btn-success {
+  color: #27ae60;
+}
+.btn-transparent.btn-inverse {
+  color: #2c3e50;
+}
+.btn-facebook {
+  background-color: #2e4a88;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #2e4a88;
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.btn-facebook.disabled,
+.btn-facebook[disabled] {
+  color: #ffffff !important;
+  border-color: #3b5fae;
+  background-color: #3b5fae;
+  *background-color: #34549b;
+}
+.btn-twitter {
+  background-color: #008dde;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #008dde;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.btn-twitter.disabled,
+.btn-twitter[disabled] {
+  color: #ffffff !important;
+  border-color: #12a9ff;
+  background-color: #12a9ff;
+  *background-color: #009df8;
+}
+.btn-google {
+  background-color: #cc3622;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #cc3622;
+}
+.btn-google:hover,
+.btn-google:focus,
+.btn-google:active,
+.btn-google.active,
+.btn-google.disabled,
+.btn-google[disabled] {
+  color: #ffffff !important;
+  border-color: #df5442;
+  background-color: #df5442;
+  *background-color: #dc402c;
+}
+.btn-rss {
+  background-color: #f88f25;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #f88f25;
+}
+.btn-rss:hover,
+.btn-rss:focus,
+.btn-rss:active,
+.btn-rss.active,
+.btn-rss.disabled,
+.btn-rss[disabled] {
+  color: #ffffff !important;
+  border-color: #faa856;
+  background-color: #faa856;
+  *background-color: #f99c3e;
+}
+[class*="btn-turn-"],
+[class*="btn-turn-"]:hover {
+  -webkit-transition: color .2s ease, background-color .2s ease;
+  -moz-transition: color .2s ease, background-color .2s ease;
+  -o-transition: color .2s ease, background-color .2s ease;
+  transition: color .2s ease, background-color .2s ease;
+}
+.btn-turn-primary:hover {
+  background-color: #e67e22;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #e67e22;
+}
+.btn-turn-primary:hover:hover,
+.btn-turn-primary:hover:focus,
+.btn-turn-primary:hover:active,
+.btn-turn-primary:hover.active,
+.btn-turn-primary:hover.disabled,
+.btn-turn-primary:hover[disabled] {
+  color: #ffffff !important;
+  border-color: #ea9347;
+  background-color: #ea9347;
+  *background-color: #e88630;
+}
+.btn-turn-warning:hover {
+  background-color: #f1c40f;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #f1c40f;
+}
+.btn-turn-warning:hover:hover,
+.btn-turn-warning:hover:focus,
+.btn-turn-warning:hover:active,
+.btn-turn-warning:hover.active,
+.btn-turn-warning:hover.disabled,
+.btn-turn-warning:hover[disabled] {
+  color: #ffffff !important;
+  border-color: #f3cd36;
+  background-color: #f3cd36;
+  *background-color: #f2c81d;
+}
+.btn-turn-danger:hover {
+  background-color: #d94d3f;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #d94d3f;
+}
+.btn-turn-danger:hover:hover,
+.btn-turn-danger:hover:focus,
+.btn-turn-danger:hover:active,
+.btn-turn-danger:hover.active,
+.btn-turn-danger:hover.disabled,
+.btn-turn-danger:hover[disabled] {
+  color: #ffffff !important;
+  border-color: #e06d61;
+  background-color: #e06d61;
+  *background-color: #dc594c;
+}
+.btn-turn-success:hover {
+  background-color: #27ae60;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #27ae60;
+}
+.btn-turn-success:hover:hover,
+.btn-turn-success:hover:focus,
+.btn-turn-success:hover:active,
+.btn-turn-success:hover.active,
+.btn-turn-success:hover.disabled,
+.btn-turn-success:hover[disabled] {
+  color: #ffffff !important;
+  border-color: #2ecf72;
+  background-color: #2ecf72;
+  *background-color: #2aba67;
+}
+.btn-turn-info:hover {
+  background-color: #3498db;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #3498db;
+}
+.btn-turn-info:hover:hover,
+.btn-turn-info:hover:focus,
+.btn-turn-info:hover:active,
+.btn-turn-info:hover.active,
+.btn-turn-info:hover.disabled,
+.btn-turn-info:hover[disabled] {
+  color: #ffffff !important;
+  border-color: #57aae1;
+  background-color: #57aae1;
+  *background-color: #419fdd;
+}
+.btn-turn-inverse:hover {
+  background-color: #2c3e50;
+  color: #ffffff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #2c3e50;
+}
+.btn-turn-inverse:hover:hover,
+.btn-turn-inverse:hover:focus,
+.btn-turn-inverse:hover:active,
+.btn-turn-inverse:hover.active,
+.btn-turn-inverse:hover.disabled,
+.btn-turn-inverse:hover[disabled] {
+  color: #ffffff !important;
+  border-color: #3a526a;
+  background-color: #3a526a;
+  *background-color: #31465a;
+}
+.nav-stacked.nav-spaced li {
+  margin-bottom: 10px;
+}
+.nav-stacked.nav-spaced li a,
+.nav-stacked.nav-spaced li a:hover,
+.nav-stacked.nav-spaced li a:focus {
+  border-width: 0;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  border-radius: 4px !important;
+  background-color: #eee;
+}
+.nav-stacked.nav-spaced li a:hover {
+  color: #e67e22;
+}
+.nav-stacked.nav-spaced li.active a {
+  background-color: #e67e22;
+  color: #ffffff;
+}
+.nav-stacked.nav-spaced li.active .label {
+  background: #ffffff;
+  color: #999999;
+}
+.nav-pills.img-pills li a {
+  color: #566678;
+}
+.nav-pills.img-pills li.active a {
+  color: #fff;
+}
+.nav-pills.img-pills li img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.nav-stacked a {
+  *zoom: 1;
+}
+.nav-stacked a:before,
+.nav-stacked a:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.nav-stacked a:after {
+  clear: both;
+}
+.nav-stacked .toggle {
+  margin: 0;
+  float: right;
+}
+.thumbnails.flush {
+  margin-left: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border: 0 solid #cccccc;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.thumbnails.flush li {
+  margin: 0;
+}
+.thumbnails.flush .thumbnail {
+  padding: 0;
+  border: 0;
+}
+.thumbnails.flush .thumbnail img {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: opacity ease 0.3s;
+  -moz-transition: opacity ease 0.3s;
+  -o-transition: opacity ease 0.3s;
+  transition: opacity ease 0.3s;
+}
+.thumbnails.flush .thumbnail img:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-transition: opacity ease 0.3s;
+  -moz-transition: opacity ease 0.3s;
+  -o-transition: opacity ease 0.3s;
+  transition: opacity ease 0.3s;
+}
+@media (max-width: 767px) {
+  .thumbnails.flush {
+    background-color: transparent;
+  }
+  .thumbnails.flush .thumbnail {
+    background-color: transparent;
+    text-align: center;
+  }
+  .thumbnails.flush .thumbnail img {
+    width: auto;
+  }
+}
+.thumbnails.flush li.span12 {
+  width: 940px;
+}
+.thumbnails.flush li.span11 {
+  width: 861.6666666666666px;
+}
+.thumbnails.flush li.span10 {
+  width: 783.3333333333333px;
+}
+.thumbnails.flush li.span9 {
+  width: 705px;
+}
+.thumbnails.flush li.span8 {
+  width: 626.6666666666666px;
+}
+.thumbnails.flush li.span7 {
+  width: 548.3333333333333px;
+}
+.thumbnails.flush li.span6 {
+  width: 470px;
+}
+.thumbnails.flush li.span5 {
+  width: 391.66666666666663px;
+}
+.thumbnails.flush li.span4 {
+  width: 313.3333333333333px;
+}
+.thumbnails.flush li.span3 {
+  width: 235px;
+}
+.thumbnails.flush li.span2 {
+  width: 156.66666666666666px;
+}
+.thumbnails.flush li.span1 {
+  width: 78.33333333333333px;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .thumbnails.flush li.span12 {
+    width: 724px;
+  }
+  .thumbnails.flush li.span11 {
+    width: 663.6666666666667px;
+  }
+  .thumbnails.flush li.span10 {
+    width: 603.3333333333334px;
+  }
+  .thumbnails.flush li.span9 {
+    width: 543px;
+  }
+  .thumbnails.flush li.span8 {
+    width: 482.6666666666667px;
+  }
+  .thumbnails.flush li.span7 {
+    width: 422.33333333333337px;
+  }
+  .thumbnails.flush li.span6 {
+    width: 362px;
+  }
+  .thumbnails.flush li.span5 {
+    width: 301.6666666666667px;
+  }
+  .thumbnails.flush li.span4 {
+    width: 241.33333333333334px;
+  }
+  .thumbnails.flush li.span3 {
+    width: 181px;
+  }
+  .thumbnails.flush li.span2 {
+    width: 120.66666666666667px;
+  }
+  .thumbnails.flush li.span1 {
+    width: 60.333333333333336px;
+  }
+}
+@media (min-width: 1200px) {
+  .thumbnails.flush li.span12 {
+    width: 1170px;
+  }
+  .thumbnails.flush li.span11 {
+    width: 1072.5px;
+  }
+  .thumbnails.flush li.span10 {
+    width: 975px;
+  }
+  .thumbnails.flush li.span9 {
+    width: 877.5px;
+  }
+  .thumbnails.flush li.span8 {
+    width: 780px;
+  }
+  .thumbnails.flush li.span7 {
+    width: 682.5px;
+  }
+  .thumbnails.flush li.span6 {
+    width: 585px;
+  }
+  .thumbnails.flush li.span5 {
+    width: 487.5px;
+  }
+  .thumbnails.flush li.span4 {
+    width: 390px;
+  }
+  .thumbnails.flush li.span3 {
+    width: 292.5px;
+  }
+  .thumbnails.flush li.span2 {
+    width: 195px;
+  }
+  .thumbnails.flush li.span1 {
+    width: 97.5px;
+  }
+}
+/* Flex Video */
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.flex-video.widescreen {
+  padding-bottom: 57.25%;
+}
+.flex-video.vimeo {
+  padding-top: 0;
+}
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video,
+.flex-video .video-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video {
+    padding-top: 0;
+  }
+}
+/*!
+Video.js FLAT Style (http://videojs.com)
+Version 4.0.2
+*/
+/* Base UI Component Classes
+-------------------------------------------------------------------------------- */
+.video-js.vjs-flat-skin {
+  font-size: 15px;
+}
+.vjs-flat-skin {
+  color: #ccc;
+}
+/* Slider - used for Volume bar and Seek bar */
+.vjs-flat-skin .vjs-slider {
+  outline: 0;
+  /* Replace browser focus hightlight with handle highlight */
+
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  background: #323232;
+  /* IE8- Fallback */
+
+  background: rgba(100, 100, 100, 0.5);
+}
+.vjs-flat-skin .vjs-slider:focus {
+  background: #464646;
+  /* IE8- Fallback */
+
+  background: rgba(100, 100, 100, 0.7);
+  -webkit-box-shadow: 0 0 2em #ffffff;
+  -moz-box-shadow: 0 0 2em #ffffff;
+  box-shadow: 0 0 2em #ffffff;
+}
+.vjs-flat-skin .vjs-slider-handle {
+  position: absolute;
+  /* Needed for IE6 */
+
+  left: 0;
+  top: 0;
+}
+.vjs-flat-skin .vjs-slider-handle:before {
+  /*content: "\f111";*/
+  /* Circle icon = f111 */
+
+  content: "\f111";
+  /* Circle icon */
+
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  line-height: .5;
+  text-align: center;
+  color: #bf6516;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Rotate the square icon to make a diamond */
+
+  /*
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  */
+
+}
+/* Control Bar
+-------------------------------------------------------------------------------- */
+/* The default control bar. Created by controls.js */
+.vjs-flat-skin .vjs-control-bar {
+  display: block;
+  /* Start visible */
+
+  position: absolute;
+  /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+
+  bottom: 0;
+  /* 100% width of player div */
+
+  left: 0;
+  right: 0;
+  /* Controls are absolutely position, so no padding necessary */
+
+  padding: 0;
+  margin: 0;
+  /* Height includes any margin you want above or below control items */
+
+  height: 3.0em;
+  background-color: #293134;
+  /* Slight blue so it can be seen more easily on black. */
+
+  /* Default font settings */
+
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
+/* General styles for individual controls. */
+.vjs-flat-skin .vjs-control {
+  outline: none;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 3.0em;
+  width: 4em;
+}
+/* FontAwsome button icons */
+.vjs-flat-skin .vjs-control:before {
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+/* Replacement for focus outline */
+.vjs-flat-skin .vjs-control:focus {
+  /*  outline: 0; */
+  /* keyboard-only users cannot see the focus on several of the UI elements when this is set to 0 */
+}
+/* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
+.vjs-flat-skin .vjs-control-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Play/Pause
+-------------------------------------------------------------------------------- */
+.vjs-flat-skin .vjs-play-control {
+  width: 5em;
+  cursor: pointer;
+  color: #e67e22;
+}
+.vjs-flat-skin .vjs-play-control:before {
+  content: "\f04b";
+  /* Play Icon */
+
+}
+.vjs-flat-skin.vjs-playing .vjs-play-control:before {
+  content: "\f04c";
+  /* Pause Icon */
+
+}
+/* Rewind
+-------------------------------------------------------------------------------- */
+/*.vjs-flat-skin .vjs-rewind-control { width: 5em; cursor: pointer !important; }
+.vjs-flat-skin .vjs-rewind-control div { width: 19px; height: 16px; background: url('video-js.png'); margin: 0.5em auto 0; }
+*/
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-flat-skin .vjs-mute-control,
+.vjs-flat-skin .vjs-volume-menu-button {
+  cursor: pointer;
+  float: right;
+}
+.vjs-flat-skin .vjs-mute-control:before,
+.vjs-flat-skin .vjs-volume-menu-button:before {
+  content: "\f028";
+  /* Full volume */
+
+  color: #bcc1c7;
+}
+.vjs-flat-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-flat-skin .vjs-volume-menu-button.vjs-vol-0:before {
+  content: "\f026";
+  /* No volume */
+
+  color: #bcc1c7;
+}
+.vjs-flat-skin .vjs-mute-control.vjs-vol-1:before,
+.vjs-flat-skin .vjs-volume-menu-button.vjs-vol-1:before {
+  content: "\f027";
+  /* Half volume */
+
+  color: #bcc1c7;
+}
+.vjs-flat-skin .vjs-mute-control.vjs-vol-2:before,
+.vjs-flat-skin .vjs-volume-menu-button.vjs-vol-2:before {
+  content: "\f028";
+  /* Full volume */
+
+  color: #bcc1c7;
+}
+.vjs-flat-skin .vjs-volume-control {
+  width: 5em;
+  float: right;
+}
+.vjs-flat-skin .vjs-volume-bar {
+  width: 5em;
+  height: 0.6em;
+  margin: 1.1em auto 0;
+}
+.vjs-flat-skin .vjs-volume-menu-button .vjs-menu-content {
+  height: 2.9em;
+}
+.vjs-flat-skin .vjs-volume-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.6em;
+  background-color: #e67e22;
+  /*background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;*/
+
+}
+.vjs-flat-skin .vjs-volume-bar .vjs-volume-handle {
+  width: 0.5em;
+  height: 0.5em;
+}
+.vjs-flat-skin .vjs-volume-handle:before {
+  font-size: 1.2em;
+  font-size: 18px\9;
+  line-height: 1;
+  top: -0.2em;
+  left: -0.2em;
+  width: 1em;
+  height: 1em;
+}
+.vjs-flat-skin .vjs-volume-menu-button .vjs-menu .vjs-menu-content {
+  width: 6em;
+  left: -4em;
+}
+/*.vjs-flat-skin .vjs-menu-button .vjs-volume-control {
+  height: 1.5em;
+}*/
+/* Progress
+-------------------------------------------------------------------------------- */
+.vjs-flat-skin .vjs-progress-control {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-size: 0.3em;
+  height: 1em;
+  /* Set above the rest of the controls. */
+
+  top: -1em;
+  /* Shrink the bar slower than it grows. */
+
+  -webkit-transition: top 0.4s, height 0.4s, font-size 0.4s, -webkit-transform 0.4s;
+  -moz-transition: top 0.4s, height 0.4s, font-size 0.4s, -moz-transform 0.4s;
+  -o-transition: top 0.4s, height 0.4s, font-size 0.4s, -o-transform 0.4s;
+  transition: top 0.4s, height 0.4s, font-size 0.4s, transform 0.4s;
+}
+/* On hover, make the progress bar grow to something that's more clickable.
+    This simply changes the overall font for the progress bar, and this
+    updates both the em-based widths and heights, as wells as the icon font */
+.vjs-flat-skin:hover .vjs-progress-control {
+  font-size: .9em;
+  /* Even though we're not changing the top/height, we need to include them in
+      the transition so they're handled correctly. */
+
+  -webkit-transition: top 0.2s, height 0.2s, font-size 0.2s, -webkit-transform 0.2s;
+  -moz-transition: top 0.2s, height 0.2s, font-size 0.2s, -moz-transform 0.2s;
+  -o-transition: top 0.2s, height 0.2s, font-size 0.2s, -o-transform 0.2s;
+  transition: top 0.2s, height 0.2s, font-size 0.2s, transform 0.2s;
+}
+/* Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-flat-skin .vjs-progress-holder {
+  /* Placement within the progress control item */
+
+  height: 100%;
+}
+/* Progress Bars */
+.vjs-flat-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-flat-skin .vjs-progress-holder .vjs-load-progress {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Needed for IE6 */
+
+  left: 0;
+  top: 0;
+}
+.vjs-flat-skin .vjs-play-progress {
+  /*
+    Using a data URI to create the white diagonal lines with a transparent
+      background. Surprising works in IE8.
+      Created using http://www.patternify.com
+    Changing the first color value will change the bar color.
+    Also using a paralax effect to make the lines move backwards.
+      The -50% left position makes that happen.
+  */
+
+  background-color: #e67e22 /*background: #66A8CC
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC)
+    -50% 0 repeat;*/
+;
+}
+.vjs-flat-skin .vjs-load-progress {
+  background-color: #bcc1c7;
+}
+.vjs-flat-skin .vjs-seek-handle {
+  width: 1.5em;
+  height: 100%;
+}
+.vjs-flat-skin .vjs-seek-handle:before {
+  padding-top: 0.1em;
+  /* Minor adjustment */
+
+}
+/* Time Display
+-------------------------------------------------------------------------------- */
+.vjs-flat-skin .vjs-time-controls {
+  font-size: 1em;
+  /* Align vertically by making the line height the same as the control bar */
+
+  line-height: 3em;
+  font-weight: bold;
+  font-family: "Lato";
+}
+.vjs-flat-skin .vjs-current-time {
+  float: left;
+}
+.vjs-flat-skin .vjs-duration {
+  float: left;
+}
+/* Remaining time is in the HTML, but not included in default design */
+.vjs-flat-skin .vjs-remaining-time {
+  display: none;
+  float: left;
+}
+.vjs-time-divider {
+  float: left;
+  line-height: 3em;
+}
+/* Fullscreen
+-------------------------------------------------------------------------------- */
+.vjs-flat-skin .vjs-fullscreen-control {
+  width: 3.8em;
+  cursor: pointer;
+  float: right;
+}
+.vjs-flat-skin .vjs-fullscreen-control:before {
+  content: "\f065";
+  /* Enter full screen */
+
+}
+.vjs-flat-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+  content: "\f066";
+  /* Exit full screen */
+
+}
+/* Big Play Button (at start)
+---------------------------------------------------------*/
+.vjs-flat-skin .vjs-big-play-button {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 12.0em;
+  height: 6.0em;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 1;
+  color: #bcc1c7;
+  /* Need a slightly gray bg so it can be seen on black backgrounds */
+
+  background-color: transparent;
+  border: 0.3em solid #bcc1c7;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-transition: border-color 0.3s linear;
+  -moz-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
+  /* @geedmo
+  -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+     -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+          box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+
+  -webkit-transition: border 0.4s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+     -moz-transition: border 0.4s,    -moz-box-shadow 0.4s,    -moz-transform 0.4s;
+       -o-transition: border 0.4s,      -o-box-shadow 0.4s,      -o-transform 0.4s;
+          transition: border 0.4s,         box-shadow 0.4s,         transform 0.4s;
+          */
+
+}
+.vjs-flat-skin:hover .vjs-big-play-button,
+.vjs-flat-skin .vjs-big-play-button:focus {
+  outline: 0;
+  color: #e67e22;
+  border: 0.3em solid #e67e22;
+  -webkit-transition: border-color 0.3s linear;
+  -moz-transition: border-color 0.3s linear;
+  -o-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
+  /* IE8 needs a non-glow hover state */
+
+  /*
+  -webkit-box-shadow: 0 0 3em #fff;
+     -moz-box-shadow: 0 0 3em #fff;
+          box-shadow: 0 0 3em #fff;
+
+  -webkit-transition: border 0s, -webkit-box-shadow 0s, -webkit-transform 0s;
+     -moz-transition: border 0s,    -moz-box-shadow 0s,    -moz-transform 0s;
+       -o-transition: border 0s,      -o-box-shadow 0s,      -o-transform 0s;
+          transition: border 0s,         box-shadow 0s,         transform 0s;*/
+
+}
+.vjs-flat-skin .vjs-big-play-button:before {
+  content: "\f04b";
+  /* Play icon */
+
+  font-family: FontAwesome;
+  font-size: 3em;
+  line-height: 2em;
+  text-align: center;
+  /* Needed for IE8 */
+
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Loading Spinner
+---------------------------------------------------------*/
+.vjs-loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 5em;
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  margin-left: -0.5em;
+  margin-top: -0.5em;
+  opacity: 0.75;
+  -webkit-animation: spin 1.5s infinite linear;
+  -moz-animation: spin 1.5s infinite linear;
+  -o-animation: spin 1.5s infinite linear;
+  animation: spin 1.5s infinite linear;
+}
+.vjs-flat-skin .vjs-loading-spinner:before {
+  content: "\f110";
+  /* Loading spinner icon */
+
+  font-family: FontAwesome;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  text-shadow: 0em 0em 0.1em #000;
+}
+/* Add a gradient to the spinner by overlaying another copy.
+   Text gradient plus a text shadow doesn't work
+   and `background-clip: text` only works in Webkit. */
+.vjs-flat-skin .vjs-loading-spinner:after {
+  content: "\f110";
+  /* Loading spinner icon */
+
+  font-family: FontAwesome;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+/* Menu Buttons (Captions/Subtitles/etc.)
+-------------------------------------------------------------------------------- */
+.vjs-flat-skin .vjs-menu-button {
+  float: right;
+  cursor: pointer;
+}
+.vjs-flat-skin .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0em;
+  /* (Width of vjs-menu - width of button) / 2 */
+
+  width: 0em;
+  height: 0em;
+  margin-bottom: 3em;
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  border-top: 1.55em solid #000000;
+  /* Same top as ul bottom */
+
+  border-top-color: rgba(7, 40, 50, 0.5);
+  /* Same as ul background */
+
+}
+/* Button Pop-up Menu */
+.vjs-flat-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 10em;
+  bottom: 1.5em;
+  /* Same bottom as vjs-menu border-top */
+
+  max-height: 15em;
+  overflow: auto;
+  left: -5em;
+  /* Width of menu - width of button / 2 */
+
+  background-color: #000000;
+  background-color: rgba(7, 40, 50, 0.7);
+  -webkit-box-shadow: -20px -20px 0px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+  box-shadow: -0.2em -0.2em 0.3em rgba(255, 255, 255, 0.2);
+}
+/*.vjs-flat-skin .vjs-menu-button:focus ul,*//* This is not needed because keyboard accessibility for the caption button is not handled with the focus any more. */
+.vjs-flat-skin .vjs-menu-button:hover .vjs-menu {
+  display: block;
+}
+.vjs-flat-skin .vjs-menu-button ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0.3em 0 0.3em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: lowercase;
+}
+.vjs-flat-skin .vjs-menu-button ul li.vjs-selected {
+  background-color: #000;
+}
+.vjs-flat-skin .vjs-menu-button ul li:focus,
+.vjs-flat-skin .vjs-menu-button ul li:hover,
+.vjs-flat-skin .vjs-menu-button ul li.vjs-selected:focus,
+.vjs-flat-skin .vjs-menu-button ul li.vjs-selected:hover {
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #111;
+  outline: 0;
+  -webkit-box-shadow: 0 0 1em #ffffff;
+  -moz-box-shadow: 0 0 1em #ffffff;
+  box-shadow: 0 0 1em #ffffff;
+}
+.vjs-flat-skin .vjs-menu-button ul li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+/* Subtitles Button */
+.vjs-flat-skin .vjs-subtitles-button:before {
+  content: "\e00c";
+}
+/* There's unfortunately no CC button in FontAwesome, so we need
+    to manually create one. Please +1 the fontawesome request.
+    https://github.com/FortAwesome/Font-Awesome/issues/968 */
+.vjs-flat-skin .vjs-captions-button {
+  font-size: 1em;
+  /* Font icons are 1.5em */
+
+  display: none;
+}
+.vjs-flat-skin .vjs-captions-button:before {
+  content: "\e008";
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: none;
+}
+/* Replacement for focus outline */
+.vjs-flat-skin .vjs-captions-button:focus .vjs-control-content:before,
+.vjs-flat-skin .vjs-captions-button:hover .vjs-control-content:before {
+  -webkit-box-shadow: 0 0 1em #ffffff;
+  -moz-box-shadow: 0 0 1em #ffffff;
+  box-shadow: 0 0 1em #ffffff;
+}
+.panel {
+  position: relative;
+  max-width: 276px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  white-space: normal;
+  *zoom: 1;
+}
+.panel:before,
+.panel:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.panel:after {
+  clear: both;
+}
+.panel > h1,
+.panel > h2,
+.panel > h3,
+.panel > h4,
+.panel > h5,
+.panel > h6 {
+  margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  font-weight: bold;
+  line-height: 1;
+  border-bottom: 1px solid #e67e22;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.panel > h1:empty,
+.panel > h2:empty,
+.panel > h3:empty,
+.panel > h4:empty,
+.panel > h5:empty,
+.panel > h6:empty {
+  display: none;
+}
+.panel p {
+  margin: 0;
+}
+.panel[class*="panel-"] h1,
+.panel[class*="panel-"] h2,
+.panel[class*="panel-"] h3,
+.panel[class*="panel-"] h4,
+.panel[class*="panel-"] h5,
+.panel[class*="panel-"] h6 {
+  border: none;
+}
+.panel.panel-primary {
+  color: #ffffff;
+  border-color: #bf6516;
+  background-color: #e67e22;
+}
+.panel.panel-info {
+  color: #ffffff;
+  border-color: #217dbb;
+  background-color: #3498db;
+}
+.panel.panel-danger {
+  color: #ffffff;
+  border-color: #bf3426;
+  background-color: #d94d3f;
+}
+.panel.panel-warning {
+  color: #ffffff;
+  border-color: #c29d0b;
+  background-color: #f1c40f;
+}
+.panel.panel-success {
+  color: #ffffff;
+  border-color: #1e8449;
+  background-color: #27ae60;
+}
+.panel.panel-inverse {
+  color: #ffffff;
+  border-color: #1a242f;
+  background-color: #2c3e50;
+}
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #f7f8f9;
+  background-color: #e67e22;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+x:-o-prefocus,
+.progress-radial {
+  background-clip: content-box;
+}
+/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */.progress-radial .overlay {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #f7f8f9;
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 22px;
+  font-weight: 100;
+}
+.progress-0 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(90deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-5 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(108deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-10 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(126deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-15 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(144deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-20 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(162deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-25 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(180deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-30 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(198deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-35 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(216deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-40 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(234deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-45 {
+  background-image: linear-gradient(90deg, #f7f8f9 50%, transparent 50%, transparent), linear-gradient(252deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-50 {
+  background-image: linear-gradient(270deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-55 {
+  background-image: linear-gradient(288deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-60 {
+  background-image: linear-gradient(306deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-65 {
+  background-image: linear-gradient(324deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-70 {
+  background-image: linear-gradient(342deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-75 {
+  background-image: linear-gradient(360deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-80 {
+  background-image: linear-gradient(378deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-85 {
+  background-image: linear-gradient(396deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-90 {
+  background-image: linear-gradient(414deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
+.progress-95 {
+  background-image: linear-gradient(432deg, #e67e22 50%, transparent 50%, transparent), linear-gradient(270deg, #e67e22 50%, #f7f8f9 50%, #f7f8f9);
+}
