@@ -1,14 +1,14 @@
 <aside>
 	<div class="well well-lg">
-		<h5>Images To Open</h5>
-		<ul>
+		<h4>Uploaded Images</h5>
+		
 			
 			{{#each image in controller}}
 		  		{{image-item item=image}}
 			{{/each}}
 			<hr>
 			{{outlet}}
-		</ul>
+		
 	</div>
 </aside>
 

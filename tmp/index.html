@@ -7,14 +7,22 @@
         <!-- build:css(tmp) assets/styles/main.css -->
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link href="assets/css/plan.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/styles/style.css">
-         <style>
+    <style>
     body { padding-top: 60px; }
     hr { margin: 8px 0; } /* separate sections */
-    DIV#loader {border: 1px solid #ccc;}
+    DIV#loader {text-align: center; border: 1px solid #ccc;}
 
+    footer {
+      background-color: white;
+      border-top: 1px solid #ddd;
+      padding: 30px;
+      margin-top: 50px;
+    }  
+   
   </style>
-        <!-- endbuild -->
+          <!-- endbuild -->
 </head>
     <body>
 
@@ -30,12 +38,11 @@
         <!-- endbuild -->
 
         <!-- build:js(tmp) scripts/main.js -->
-           <script src="assets/js/jquery.resizeimagetoparent.min.js"></script>
-  <script src="assets/js/video.js"></script>         j
-  <script src="assets/js/video.js"></script>
-  <script src="assets/js/responsive.video.js"></script>
+  <script src="assets/js/jquery.resizeimagetoparent.min.js"></script>
+ 
   <!-- Plan UI elements -->
-  <script src="assets/js/plan.ui.js"></script>
+  
+  
   <!-- PlaceHolder fallback -->
   <script src="assets/js/jquery.placeholder.js"></script>
  
@@ -43,7 +50,8 @@
 
         <script src="app/app.js"></script>
         <script src="app/compiled-templates.js"></script>
-         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/plan.ui.js"></script>
+        
   <!-- Video -->
   
         <!-- endbuild -->

@@ -29,7 +29,7 @@ function program3(depth0,data) {
   },inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push(" \n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n              <li><a href=\"#\">Link</a></li>\n               ");
+  data.buffer.push(" \n          </div>\n\n          <!-- Collect the nav links, forms, and other content for toggling -->\n          <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n               ");
   hashTypes = {};
   hashContexts = {};
   stack2 = helpers.each.call(depth0, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
@@ -38,7 +38,7 @@ function program3(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n  </div>\n  <div class=\"col-lg-9 col-md-9 col-sm-9\">\n    \n      <div class=\"alert alert-info\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>\n          <strong>Instructions: </strong> Click on the image on the left, or add a new one. Now do something else interesting with the thing. \n        </div>\n        \n      <div class=\"col-lg-10 col-md-10 col-sm-10 col-xs-6 center\">\n        <div id=\"loader\" class=\"loading\">\n        <a href=\"#\">\n          <img class=\"img-responsive\" src=\"assets/img/image-placeholder.png\" alt>\n        </a>\n        </div>\n      </div>\n    \n  </div>\n</div>\n\n</div>\n<footer class=\"text-center\">\n    <hr>\n    <p>\n      <div id=\"gototop\" class=\"container\">\n        <a href=\"#\"><i class=\"icon-chevron-up\"></i></a>\n      </div>\n      <div class=\"container\">\n        <p>\n      Powered by <a href=\"http://mikespicer.net\">A nerd or 2</a> Powered by CSS3.</p>\n        <p>2013 © All rights reserved. </p>\n      </div>\n    </p>\n</footer>\n");
+  data.buffer.push("\n  </div>\n  <div class=\"col-lg-9 col-md-9 col-sm-9\">\n    \n      <div class=\"alert alert-info\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>\n          <strong>Instructions: </strong> Click on the image on the left, or add a new one. Now do something else interesting with the thing. \n        </div>\n        \n      <div class=\"col-lg-10 col-md-10 col-sm-10 col-xs-6 center\">\n        <div id=\"loader\" class=\"loading\">\n        <a href=\"#\">\n          <img class=\"img-responsive\" src=\"assets/img/image-placeholder.png\" alt>\n        </a>\n        </div>\n      </div>\n    \n  </div>\n</div>\n\n</div>\n<footer class=\"text-center\">\n    <hr>\n    <p>\n      <div id=\"gototop\" class=\"container\">\n        <a href=\"#\"><i class=\"icon-chevron-up\"></i></a>\n      </div>\n      <div class=\"container\">\n        <p>\n      Powered by <a href=\"http://mikespicer.net\">A nerd or 2</a> on the line.</p>\n        <p>2013 © All rights reserved. </p>\n      </div>\n    </p>\n</footer>\n");
   return buffer;
   
 });
@@ -49,34 +49,19 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<li>\n	<a href=\"#\" class=\"image-open\" ");
+  data.buffer.push("\n<div class=\"row\">\n	<a class=\"btn btn-default\" href=\"#\"> Default</a>\n	<div class=\"btn-group\">\n    	<button class=\"btn btn-default\" ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "openimg", "item.path", {hash:{},contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" title=\"Open Image\">");
+  data.buffer.push(" >");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.name", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</a>\n	<a href=\"#\" class=\"todo-delete\" ");
+  data.buffer.push("</button>\n\n    	<button type=\"button\" class=\"btn btn-default\">\n    		<span class=\"glyphicon glyphicon-file\"></span>\n    	</button>\n	</div>\n</div>\n<div class=\"row\">\n	<div class=\"btn-group\">\n		<button type=\"button\" class=\"btn btn-default\" ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "delete", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" title=\"Delete Image\">&times;</a>\n</li>\n");
-  return buffer;
-  
-});
-
-Ember.TEMPLATES["components/images-menu"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
-
-
-  data.buffer.push("\n		");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n	");
+  data.buffer.push(" ><i class=\"icon-fixed-width icon-trash\"></i></button>\n	</div>\n</div>\n\n");
   return buffer;
   
 });
@@ -138,7 +123,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<aside>\n	<div class=\"well well-lg\">\n		<h5>Images To Open</h5>\n		<ul>\n			\n			");
+  data.buffer.push("<aside>\n	<div class=\"well well-lg\">\n		<h4>Uploaded Images</h5>\n		\n			\n			");
   hashTypes = {};
   hashContexts = {};
   stack1 = helpers.each.call(depth0, "image", "in", "controller", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
@@ -147,7 +132,7 @@ function program1(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n		</ul>\n	</div>\n</aside>\n\n\n\n");
+  data.buffer.push("\n		\n	</div>\n</aside>\n\n\n\n");
   return buffer;
   
 });
@@ -162,7 +147,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "newImage", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(">Add Image</button>			\n");
+  data.buffer.push(" >Add Image</button>			\n");
   return buffer;
   
 });
