@@ -49,19 +49,23 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("\n<div class=\"row\">\n	<a class=\"btn btn-default\" href=\"#\"> Default</a>\n	<div class=\"btn-group\">\n    	<button class=\"btn btn-default\" ");
+  data.buffer.push("\n<div class=\"row\">\n	<div class=\"btn-group\">\n    	<button type=\"button\" class=\"btn btn-default\" ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "openimg", "item.path", {hash:{},contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" >");
+  data.buffer.push(" ><span class=\"glyphicon glyphicon-file\"></span>");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.name", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</button>\n\n    	<button type=\"button\" class=\"btn btn-default\">\n    		<span class=\"glyphicon glyphicon-file\"></span>\n    	</button>\n	</div>\n</div>\n<div class=\"row\">\n	<div class=\"btn-group\">\n		<button type=\"button\" class=\"btn btn-default\" ");
+  data.buffer.push("</button>\n    </div>\n    <div class=\"btn-group\">\n    	<button type=\"button\" class=\"btn btn-default pull-right\" ");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "delete", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" ><i class=\"icon-fixed-width icon-trash\"></i></button>\n	</div>\n</div>\n\n");
+  data.buffer.push(" ><span class=\"glyphicon glyphicon-trash\"></span></button>\n	</div>\n</div>\n<div class=\"row\">\n");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.frames", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n</div>");
   return buffer;
   
 });
